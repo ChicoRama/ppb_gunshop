@@ -53,6 +53,37 @@ const GUNS = [
     description:
       'The other pump gun. Twin action bars, a simple safety on the tang, and a price that leaves money for ammunition.',
   },
+  // --- 3 senjata baru (challenge) — foto asli dari internet, bukan AI-generated ---
+  {
+    name: 'Colt 1911',
+    type: 'Pistol',
+    caliber: '.45 ACP',
+    price: 949,
+    image:
+      'https://images.unsplash.com/photo-1764322276619-da63091ee08c?fm=jpg&q=60&w=800&auto=format&fit=crop',
+    description:
+      'The original service pistol. Single-action, all-steel, and heavier than anything on this shelf. A century old and still the standard everyone else copies.',
+  },
+  {
+    name: 'Winchester Model 70',
+    type: 'Rifle',
+    caliber: '.30-06 Springfield',
+    price: 1099,
+    image:
+      'https://images.unsplash.com/photo-1713643562457-d958596c7022?fm=jpg&q=60&w=800&auto=format&fit=crop',
+    description:
+      'A bolt-action classic built for one shot placed well rather than many placed fast. Controlled-round-feed action, walnut stock, no batteries required.',
+  },
+  {
+    name: 'Benelli M4',
+    type: 'Shotgun',
+    caliber: '12 Gauge',
+    price: 1899,
+    image:
+      'https://images.unsplash.com/photo-1518487884151-ad2f25fb015c?fm=jpg&q=60&w=800&auto=format&fit=crop',
+    description:
+      'Gas-operated semi-auto built for the military and it shows. Runs dirty, runs wet, cycles the next shell before you have finished thinking about the last one.',
+  },
 ]
 
 export default GUNS

@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 
-function GunCard({ gun }) {
+function GunCard({ gun, onAdd }) {
   const popup = useRef(null)
 
   return (
@@ -14,6 +14,10 @@ function GunCard({ gun }) {
         <span className="price">${gun.price.toLocaleString()}</span>
       </button>
 
+      <button type="button" className="add-btn" onClick={() => onAdd(gun)}>
+        Add to cart
+      </button>
+
       <dialog
         className="popup"
         ref={popup}
@@ -25,9 +29,21 @@ function GunCard({ gun }) {
           {gun.type} · {gun.caliber} · <span className="price">${gun.price.toLocaleString()}</span>
         </p>
         <p>{gun.description}</p>
-        <form method="dialog">
-          <button className="popup-close">Close</button>
-        </form>
+        <div className="popup-actions">
+          <button
+            type="button"
+            className="add-btn"
+            onClick={() => {
+              onAdd(gun)
+              popup.current.close()
+            }}
+          >
+            Add to cart
+          </button>
+          <form method="dialog">
+            <button className="popup-close">Close</button>
+          </form>
+        </div>
       </dialog>
     </li>
   )
